@@ -1,0 +1,16 @@
+{% extends 'polls/base.html' %}
+{% block content %}
+<h2>Create a New Poll</h2>
+<form method="post">
+    {% csrf_token %}
+    <label for="question">Question:</label>
+    <input type="text" name="question" id="question" required><br>
+    <label for="choice1">Choice 1:</label>
+    <input type="text" name="choices" id="choice1" required><br>
+    <label for="choice2">Choice 2:</label>
+    <input type="text" name="choices" id="choice2" required><br>
+    <label for="deadline">Deadline:</label>
+    <input type="datetime-local" name="deadline" id="deadline" required><br>
+    <button type="submit">Create Poll</button>
+</form>
+{% endblock %}
