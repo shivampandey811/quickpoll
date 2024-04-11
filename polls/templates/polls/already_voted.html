@@ -1,0 +1,18 @@
+{% extends 'polls/base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8 mt-5">
+            <div class="card">
+                <div class="card-header">Already Voted</div>
+
+                <div class="card-body">
+                    <p>You have already voted in this poll.</p>
+                    <a href="{% url 'index' %}" class="btn btn-primary">Back to Polls</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
